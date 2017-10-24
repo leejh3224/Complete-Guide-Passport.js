@@ -10,6 +10,10 @@ const isAuthenticated = (req, res, next) => {
   res.redirect('/user')
 }
 
+routes.get('/', isAuthenticated, (req, res) => {
+  res.redirect('/dashboard')
+})
+
 routes.get('/dashboard', isAuthenticated, (req, res) => {
   res.render('dashboard')
 })

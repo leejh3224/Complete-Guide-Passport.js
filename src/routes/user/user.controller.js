@@ -2,7 +2,7 @@ import { store } from '../../sess'
 
 exports.index = (req, res) => {
   res.locals.csrfToken = req.csrfToken()
-  res.render('index')
+  res.render('user')
 }
 
 exports.logout = (req, res) => {
