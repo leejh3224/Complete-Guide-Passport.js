@@ -40,6 +40,13 @@ Mongodb가 처음이시라면 벨로퍼트(Velopert)님의 게시물(https://vel
 ```
   git clone https://github.com/leejh3224/Complete-Guide-Passport.js.git
   cd Complete-Guide-Passport.js
+
+  /* 
+    시작전 .env 파일에 준비 사항에 표시된 변수들을 저장해주세요.
+    몽고디비 uri나 클라이언트 아이디, 시크릿 등이 없으면
+    인증작업을 테스트해볼 수 없습니다.
+  */
+  touch .env
   
   npm install or yarn
   npm run dev or yarn dev
