@@ -22,14 +22,14 @@ Mongodb가 처음이시라면 벨로퍼트(Velopert)님의 게시물(https://vel
 다음은 .env 파일입니다.
 본 프로젝트는 dotenv 모듈을 사용하고 있으며, 본 저장소에는 .env 파일이 제외되어 있기 때문에 파일을 만들고,
 
-₩₩₩
+```
   PORT=8080
   MONGO_URI=몽고디비 uri
   NAVER_CLIENT_ID=네이버 클라이언트 아이디
   NAVER_CLIENT_SECRET=네이버 클라이언트 시크릿
   FACEBOOK_CLIENT_ID=페이스북 클라이언트 아이디
   FACEBOOK_CLIENT_SECRET=페이스북 클라이언트 시크릿
-₩₩₩
+```
 
 다음과 같이 정리해두시면 간단하게 설정 파일을 관리할 수 있습니다.
 만약 배포를 앞두고 계시다면 배포 서버에 위의 환경변수를 추가해주세요.
@@ -37,11 +37,11 @@ Mongodb가 처음이시라면 벨로퍼트(Velopert)님의 게시물(https://vel
 
 ### 시작
 
-₩₩₩
+```
   git clone https://github.com/leejh3224/Complete-Guide-Passport.js.git
   cd Complete-Guide-Passport.js
   
   npm install or yarn
   npm run dev or yarn dev
-₩₩₩
+```
 
