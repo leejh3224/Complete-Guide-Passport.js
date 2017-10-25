@@ -8,6 +8,16 @@ const { host, redis_conf } = config[env]
 const RedisStore = require('connect-redis')(session)
 const client = redis.createClient(redis_conf.port, host)
 
+/* eslint-disable no-console */
+client.on('ready', () => {
+  console.log('redis client is ready!')
+})
+
+client.on('error', (err) => {
+  console.log(err)
+})
+/* eslint-enable no-console */
+
 // use store to delete session for logout route
 export const store = new RedisStore({
   client,

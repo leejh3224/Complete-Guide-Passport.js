@@ -12,15 +12,19 @@ module.exports = (app, passport) => {
   app.use(passport.initialize())
   app.use(passport.session())
 
+  /* eslint-disable no-console */
   passport.serializeUser((user, done) => {
+    console.log('serialize')
     done(null, user.id)
   })
   
   passport.deserializeUser((_id, done) => {
+    console.log('deserialize')
     User.findById({ _id })
         .then(user => done(null, user))
         .catch(e => done(e, false))
   })
+  /* eslint-enable no-console */
   
   passport.use('local-signup', new LocalStrategy({
     usernameField: 'email',
